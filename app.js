@@ -19,6 +19,28 @@ const savebtn = document.querySelector('#save_btn');
 savebtn.addEventListener('click', saveGiftList);
 const loadbtn = document.querySelector('#load_btn');
 loadbtn.addEventListener('click', loadGiftList);
+const volslider = document.querySelector('#volumeslider');
+let audio = null;
+
+window.onload = function (){
+  let vol = localStorage.getItem('giftvolume');
+  if(!vol){
+    vol = 50;
+  }
+
+  volslider.value = vol;
+
+  audio = document.createElement("audio");
+  audio.src = 'every_xmas_merry_xmas.ogg';
+  audio.volume = vol/100;
+  audio.play();
+}
+
+volslider.onchange = function(){
+  let vol = volslider.value;
+    localStorage.setItem('giftvolume', vol);
+    audio.volume = vol/100;
+}
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {

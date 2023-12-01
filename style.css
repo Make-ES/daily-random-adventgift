@@ -11,6 +11,10 @@ body {
   height: 100%;
 }
 
+.muted{
+  text-decoration: line-through solid 2px;
+}
+
 #settings {
   color: #aaa;
   position: fixed;
