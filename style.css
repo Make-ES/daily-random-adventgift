@@ -50,6 +50,7 @@ body {
     margin: 0 auto;
     margin-top: 50px;
     border: 8px double gold;
+    box-shadow: 0px 0px 10px 10px gold;
 }
 
 .door {
@@ -69,7 +70,7 @@ body {
 
 .doorOpen {
     /*prespectiv creates the door open effect*/
-    transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+    transform: perspective(100vw) translateZ(0px) translateX(0px) translateY(0px) rotateY(-100deg);
 }
 
 #number {
@@ -124,7 +125,7 @@ body {
     border: 2px solid #888;
     width: 80%;
     /* Could be more or less, depending on screen size */
-    height: 80%;
+    height: 70%;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;

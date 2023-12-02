@@ -39,6 +39,7 @@ window.onload = function() {
     audio = document.createElement("audio");
     audio.src = 'every_xmas_merry_xmas.ogg';
     audio.volume = vol / 100;
+    audio.loop = true;
     audio.play();
 }
 
