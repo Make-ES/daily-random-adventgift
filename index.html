@@ -1,76 +1,80 @@
 <html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adventskalender</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="snowflakes" aria-hidden="true">
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-    <div class="snowflake">
-      <div class="inner">❅</div>
-    </div>
-  </div>
-  <div id="settings">&#9881;</div>
-  <h1>Adventskalender</h1>
-  <div class="backDoor">
-    <span id="gift">&#x1F381;</span>
-    <div class="door">
-      <span id="number">1</span>
-    </div>
-  </div>
-  <div id="close">x</div>
-  <div id="gift-dialog" class="modal">
-    <div class="modal-content">
-      <div id="gift-description">
 
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventskalender</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
     </div>
-  </div>
-  <div id="control-dialog" class="modal">
-    <div class="modal-content">
-      <div>
-        <label>&#128266;</label>
-        <input type="range" id="volumeslider" min="0" max="100">
-      </div>
-      <div><input type="file" id="fileinput"><button id="load_btn">Laden</button><button id="save_btn">Speichern</button></div>
-      <div><textarea id="gifttext_in"></textarea><button id="add_btn">+</button> </div>
-      <div id="giftlist"></div>
+    <div id="settings">&#9881;</div>
+    <h1>Adventskalender</h1>
+    <div class="backDoor">
+        <span id="gift">&#x1F381;</span>
+        <div class="door">
+            <span id="number">1</span>
+        </div>
     </div>
-  </div>
-  <script src="app.js"></script>
+    <div id="close">x</div>
+    <div id="gift-dialog" class="modal">
+        <div class="modal-content">
+            <div id="gift-description">
+
+            </div>
+        </div>
+    </div>
+    <div id="control-dialog" class="modal">
+        <div class="modal-content">
+            <div>
+                <label>&#128266;</label>
+                <input type="range" id="volumeslider" min="0" max="100">
+            </div>
+            <div><input type="file" id="fileinput"><button id="load_btn">Laden</button><button id="save_btn">Speichern</button></div>
+            <div><label for="autoremove" title="Geschenke werden entfernt, wenn sie einmal angezeigt wurden.">Geschenke verbrauchen<input type="checkbox" name="autoremove" id="autoremove"></label></div>
+            <div><textarea id="gifttext_in"></textarea><button id="add_btn">+</button> </div>
+            <div id="giftlist"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
 </body>
+
 </html>

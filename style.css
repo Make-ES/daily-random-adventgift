@@ -1,312 +1,320 @@
-@font-face {      
-	font-family: "ChristmasOkinawa";
-	src: url("ChristmasOkinawaRegular-Wyje4.otf");
+@font-face {
+    font-family: "ChristmasOkinawa";
+    src: url("ChristmasOkinawaRegular-Wyje4.otf");
 }
 
 body {
-  font-family: ChristmasOkinawa, sans-serif;
-  text-align: center;
-  background: radial-gradient(circle, rgba(255, 157, 99, 1) 20%, rgba(214, 146, 146, 1) 59%, rgba(214, 76, 40, 1) 100%);
-  background-repeat: no-repeat;
-  height: 100%;
+    font-family: ChristmasOkinawa, sans-serif;
+    text-align: center;
+    background: radial-gradient(circle, rgba(255, 157, 99, 1) 20%, rgba(214, 146, 146, 1) 59%, rgba(214, 76, 40, 1) 100%);
+    background-repeat: no-repeat;
+    height: 100%;
 }
 
-.muted{
-  text-decoration: line-through solid 2px;
+.muted {
+    text-decoration: line-through solid 2px;
 }
 
 #settings {
-  color: #aaa;
-  position: fixed;
-  top: 5;
-  left: 5;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid #aaa;
-  background-color: white;
-  font-size: 28px;
-  font-weight: bold;
-  text-align: center;
-  vertical-align: middle;
+    color: #aaa;
+    position: fixed;
+    top: 5;
+    left: 5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #aaa;
+    background-color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
 }
 
 #settings:hover,
 #settings:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow: 3px 3px 4px #888;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 4px #888;
 }
 
-
 .backDoor {
-  background-color: #333;
-  position: relative;
-  width: 50%;
-  height: 75%;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  margin: 0 auto;
-  margin-top: 50px;
-  border: 8px double gold;
+    background-color: #333;
+    position: relative;
+    width: 50%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: 8px double gold;
 }
 
 .door {
-  background-color: brown;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  transform-origin: left;
-  /*Speed of the Door animation*/
-  transition: all 0.5s ease-in-out;
+    background-color: brown;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: left;
+    /*Speed of the Door animation*/
+    transition: all 0.5s ease-in-out;
 }
 
 .doorOpen {
-  /*prespectiv creates the door open effect*/
-  transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+    /*prespectiv creates the door open effect*/
+    transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
 }
 
 #number {
-  font-size: min(30vw, 30vh);
+    font-size: min(30vw, 30vh);
 }
 
 #gift {
-  font-size: min(50vw, 50vh);
-  cursor: pointer;
+    font-size: min(50vw, 50vh);
+    cursor: pointer;
 }
 
 #gittext_in {
-  width: 100%;
+    width: 100%;
 }
 
-#giftlist{
-  text-align: left;
+#giftlist {
+    text-align: left;
 }
+
 
 /* The Modal (background) */
+
 .modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0);
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
 }
+
 
 /* Modal Content/Box */
+
 .modal-content {
-  font-size: min(5vh, 5vw);
-  background-color: rgba(255, 255, 255, 0.95);
-  margin: 10% auto;
-  padding: 20px;
-  border: 2px solid #888;
-  width: 80%;
-  /* Could be more or less, depending on screen size */
-  height: 80%;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
+    font-size: min(5vh, 5vw);
+    background-color: rgba(255, 255, 255, 0.95);
+    margin: 10% auto;
+    padding: 20px;
+    border: 2px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+    height: 80%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.modal-content>div{
-  width: 100%;
+.modal-content>div {
+    width: 100%;
 }
+
 
 /* The Close Button */
+
 #close {
-  z-index: 2;
-  display: none;
-  color: #aaa;
-  position: fixed;
-  top: 5;
-  right: 5;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid #aaa;
-  background-color: white;
-  font-size: 28px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  text-align: center;
-  vertical-align: middle;
+    z-index: 2;
+    display: none;
+    color: #aaa;
+    position: fixed;
+    top: 5;
+    right: 5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #aaa;
+    background-color: white;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
 }
 
 #close:hover,
 #close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow: 3px 3px 4px #888;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 4px #888;
 }
 
+#control-dialog .modal-content {
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+
 /* customizable snowflake styling */
+
 .snowflake {
-  color: #fff;
-  font-size: min(3vh,3vw);
-  font-family: Arial, sans-serif;
-  text-shadow: 0 0 5px #000;
+    color: #fff;
+    font-size: min(3vh, 3vw);
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 5px #000;
 }
 
 .snowflake,
 .snowflake .inner {
-  animation-iteration-count: infinite;
-  animation-play-state: running
+    animation-iteration-count: infinite;
+    animation-play-state: running
 }
 
 @keyframes snowflakes-fall {
-  0% {
-    transform: translateY(0)
-  }
-
-  100% {
-    transform: translateY(110vh)
-  }
+    0% {
+        transform: translateY(0)
+    }
+    100% {
+        transform: translateY(110vh)
+    }
 }
 
 @keyframes snowflakes-shake {
-
-  0%,
-  100% {
-    transform: translateX(0)
-  }
-
-  50% {
-    transform: translateX(80px)
-  }
+    0%,
+    100% {
+        transform: translateX(0)
+    }
+    50% {
+        transform: translateX(80px)
+    }
 }
 
 .snowflake {
-  position: fixed;
-  top: -10%;
-  z-index: 9999;
-  -webkit-user-select: none;
-  user-select: none;
-  cursor: default;
-  animation-name: snowflakes-shake;
-  animation-duration: 3s;
-  animation-timing-function: ease-in-out
+    position: fixed;
+    top: -10%;
+    z-index: 9999;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+    animation-name: snowflakes-shake;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out
 }
 
 .snowflake .inner {
-  animation-duration: 10s;
-  animation-name: snowflakes-fall;
-  animation-timing-function: linear
+    animation-duration: 10s;
+    animation-name: snowflakes-fall;
+    animation-timing-function: linear
 }
 
 .snowflake:nth-of-type(0) {
-  left: 1%;
-  animation-delay: 0s
+    left: 1%;
+    animation-delay: 0s
 }
 
 .snowflake:nth-of-type(0) .inner {
-  animation-delay: 0s
+    animation-delay: 0s
 }
 
 .snowflake:first-of-type {
-  left: 10%;
-  animation-delay: 1s
+    left: 10%;
+    animation-delay: 1s
 }
 
 .snowflake:first-of-type .inner,
 .snowflake:nth-of-type(8) .inner {
-  animation-delay: 1s
+    animation-delay: 1s
 }
 
 .snowflake:nth-of-type(2) {
-  left: 20%;
-  animation-delay: .5s
+    left: 20%;
+    animation-delay: .5s
 }
 
 .snowflake:nth-of-type(2) .inner,
 .snowflake:nth-of-type(6) .inner {
-  animation-delay: 6s
+    animation-delay: 6s
 }
 
 .snowflake:nth-of-type(3) {
-  left: 30%;
-  animation-delay: 2s
+    left: 30%;
+    animation-delay: 2s
 }
 
 .snowflake:nth-of-type(11) .inner,
 .snowflake:nth-of-type(3) .inner {
-  animation-delay: 4s
+    animation-delay: 4s
 }
 
 .snowflake:nth-of-type(4) {
-  left: 40%;
-  animation-delay: 2s
+    left: 40%;
+    animation-delay: 2s
 }
 
 .snowflake:nth-of-type(10) .inner,
 .snowflake:nth-of-type(4) .inner {
-  animation-delay: 2s
+    animation-delay: 2s
 }
 
 .snowflake:nth-of-type(5) {
-  left: 50%;
-  animation-delay: 3s
+    left: 50%;
+    animation-delay: 3s
 }
 
 .snowflake:nth-of-type(5) .inner {
-  animation-delay: 8s
+    animation-delay: 8s
 }
 
 .snowflake:nth-of-type(6) {
-  left: 60%;
-  animation-delay: 2s
+    left: 60%;
+    animation-delay: 2s
 }
 
 .snowflake:nth-of-type(7) {
-  left: 70%;
-  animation-delay: 1s
+    left: 70%;
+    animation-delay: 1s
 }
 
 .snowflake:nth-of-type(7) .inner {
-  animation-delay: 2.5s
+    animation-delay: 2.5s
 }
 
 .snowflake:nth-of-type(8) {
-  left: 80%;
-  animation-delay: 0s
+    left: 80%;
+    animation-delay: 0s
 }
 
 .snowflake:nth-of-type(9) {
-  left: 90%;
-  animation-delay: 1.5s
+    left: 90%;
+    animation-delay: 1.5s
 }
 
 .snowflake:nth-of-type(9) .inner {
-  animation-delay: 3s
+    animation-delay: 3s
 }
 
 .snowflake:nth-of-type(10) {
-  left: 25%;
-  animation-delay: 0s
+    left: 25%;
+    animation-delay: 0s
 }
 
 .snowflake:nth-of-type(11) {
-  left: 65%;
-  animation-delay: 2.5s
+    left: 65%;
+    animation-delay: 2.5s
 }
